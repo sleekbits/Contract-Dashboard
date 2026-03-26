@@ -1,0 +1,19 @@
+appId: com.contractit.dashboard
+productName: ContractIt Dashboard
+directories:
+  output: release
+files:
+  - "src/**/*"
+  - "package.json"
+extraResources:
+  - from: assets/ContractIt.xlsx
+    to: assets/ContractIt.xlsx
+mac:
+  target:
+    - dmg
+win:
+  target:
+    - nsis
+linux:
+  target:
+    - AppImage

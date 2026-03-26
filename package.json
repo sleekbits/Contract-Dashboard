@@ -1,0 +1,23 @@
+{
+  "name": "contractit-dashboard",
+  "version": "1.0.0",
+  "description": "Offline Electron dashboard for contract and variation order tracking from Excel",
+  "main": "src/main/main.js",
+  "author": "ContractIt",
+  "license": "MIT",
+  "scripts": {
+    "generate:template": "node scripts/generate-template.js",
+    "start": "npm run generate:template && electron .",
+    "build": "npm run generate:template && electron-builder --dir",
+    "dist": "npm run generate:template && electron-builder"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.3",
+    "chokidar": "^4.0.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3"
+  }
+}
