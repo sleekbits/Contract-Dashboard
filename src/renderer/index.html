@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ContractIt Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <h1>ContractIt Dashboard</h1>
+        <p id="live-path">Live workbook: loading...</p>
+      </div>
+      <div class="header-actions">
+        <button id="btn-open-excel">Open ContractIt Excel</button>
+        <button id="btn-open-folder">Open Containing Folder</button>
+        <button id="btn-refresh">Refresh Now</button>
+        <button id="btn-reset" class="danger">Reset from Template</button>
+      </div>
+    </header>
+
+    <nav class="tabs" id="tabs"></nav>
+
+    <main>
+      <section id="tab-overview" class="tab-pane active"></section>
+      <section id="tab-register" class="tab-pane"></section>
+      <section id="tab-details" class="tab-pane"></section>
+      <section id="tab-vos" class="tab-pane"></section>
+      <section id="tab-expiry" class="tab-pane"></section>
+      <section id="tab-quality" class="tab-pane"></section>
+    </main>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <div id="mapping-modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Map Required Contract Columns</h3>
+        <p>Some required columns were not detected. Map each field to an available column.</p>
+        <div id="mapping-fields"></div>
+        <div class="modal-actions">
+          <button id="mapping-save">Save Mapping</button>
+          <button id="mapping-cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../node_modules/chart.js/dist/chart.umd.js"></script>
+    <script type="module" src="renderer.js"></script>
+  </body>
+</html>
